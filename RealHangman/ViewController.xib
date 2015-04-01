@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
+            <connections>
+                <outlet property="textField" destination="nTY-kC-WRp" id="vxp-Mt-PY2"/>
+                <outlet property="view" destination="iN0-l3-epB" id="zvg-X5-EAG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nTY-kC-WRp">
+                    <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="97" id="cgo-0n-36a"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="cgo-0n-36a"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular">
+                        <mask key="constraints">
+                            <include reference="cgo-0n-36a"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="OV2-fV-Fpn"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38t-PH-avk">
+                    <rect key="frame" x="277" y="48" width="48" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="71" id="deA-Bq-ZBr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="RESET">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="deA-Bq-ZBr"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular">
+                        <mask key="constraints">
+                            <include reference="deA-Bq-ZBr"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="resetGame:" destination="-1" eventType="touchUpInside" id="uM8-RB-4c9"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="38t-PH-avk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="48" id="4H1-Hm-10R"/>
+                <constraint firstItem="nTY-kC-WRp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="32" id="f3o-yp-ehd"/>
+                <constraint firstItem="38t-PH-avk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="27" id="jU5-Ha-Xdy"/>
+                <constraint firstItem="nTY-kC-WRp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="78" id="k92-Ct-fPC"/>
+                <constraint firstAttribute="trailing" secondItem="38t-PH-avk" secondAttribute="trailing" constant="68" id="plk-9Z-Idi"/>
+                <constraint firstItem="38t-PH-avk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="277" id="rrn-tN-cBs"/>
+                <constraint firstItem="38t-PH-avk" firstAttribute="centerY" secondItem="nTY-kC-WRp" secondAttribute="centerY" id="ymK-ss-YeP"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="nTY-kC-WRp"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="f3o-yp-ehd"/>
+                    <exclude reference="k92-Ct-fPC"/>
+                    <exclude reference="jU5-Ha-Xdy"/>
+                    <exclude reference="plk-9Z-Idi"/>
+                    <exclude reference="ymK-ss-YeP"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular">
+                <mask key="subviews">
+                    <include reference="nTY-kC-WRp"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="f3o-yp-ehd"/>
+                    <include reference="k92-Ct-fPC"/>
+                    <exclude reference="4H1-Hm-10R"/>
+                    <include reference="jU5-Ha-Xdy"/>
+                    <include reference="plk-9Z-Idi"/>
+                    <exclude reference="rrn-tN-cBs"/>
+                    <include reference="ymK-ss-YeP"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>
